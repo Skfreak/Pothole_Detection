@@ -283,7 +283,7 @@ def predictPotholes(raw):
 
 
 	URL = 'https://roads.googleapis.com/v1/nearestRoads?points='
-
+	key = '' #use your google api key
 	c = 0
 
 	for i in range(len(y_pred)):
@@ -294,7 +294,7 @@ def predictPotholes(raw):
 
 	if(c == 1):
 		URL =URL[:-1]
-		URL = URL + '&key=AIzaSyD7ALReFekmEYSVqrNfytp20lqQIgo-zUI'
+		URL = URL + '&key=' + key
 		r = requests.get(URL)
 		#print(r.json())
 		k = 0
